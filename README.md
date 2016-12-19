@@ -40,13 +40,13 @@ Example scenario:
 Usage
 =====
 
-0. Include the library
+Include the library
 
 ```html
 <script type="text/javascript" src="src/ImageReplace.js"></script>
 ```
 
-1. Initialize the service *at the beginning* of the document
+Initialize the service *at the beginning* of the document
 
 ```js
 var imgReplace = new WolnosciowiecImageReplace({
@@ -54,7 +54,7 @@ var imgReplace = new WolnosciowiecImageReplace({
 });
 ```
 
-2. Add mapping and event
+Add mapping and event
 
 ```html
 <img
@@ -63,7 +63,7 @@ var imgReplace = new WolnosciowiecImageReplace({
     onerror="imgReplace.handleImageLoadError(this);">
 ```
 
-3. Optionally add reporting
+Optionally add reporting
 
 ```html
 <script>
