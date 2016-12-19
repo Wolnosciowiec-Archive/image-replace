@@ -1,0 +1,17 @@
+{
+    "name": "wolnosciowiec-image-replace",
+    "description": "Switches tagged images with a fall back URL on image load failure.",
+    "homepage": "https://github.com/Wolnosciowiec/image-replace",
+    "main": [
+        "./src/ImageReplace.js"
+    ],
+    "keywords": [
+        "fallback", "image loading", "cdn", "hotlink", "storage", "images",
+        "bandwidth", "loader", "loading", "failure", "fall", "back", "handler",
+        "reporting", "failure reporter"
+    ],
+    "author": {
+        "name": "Wolnościowiec Team",
+        "web": "https://wolnosciowiec.net/en/open-source"
+    }
+}

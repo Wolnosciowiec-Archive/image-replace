@@ -74,6 +74,25 @@ Optionally add reporting
 </script>
 ```
 
+## FAQ
+
+1. I have different ajax call parameters, so the `imgReplace.sendErrorReport()` would not work for me
+
+At first you could pass options in second parameter of WolnosciowiecImageReplace constructor.
+
+Example:
+
+```
+new WolnosciowiecImageReplace({'img1': 'img-fallback', '...': '...'}, {
+    'successCallback': function (xhr) { console.info('successCallback', xhr); },
+    'failureCallback': function (xhr) { console.warn('failureCallback', xhr); },
+    'url': '/report/images/send',
+    'method': 'POST'
+});
+```
+
+Other way is to overload the `WolnosciowiecImageReplace.sendErrorReport` method and write your own here.
+
 Suggestion
 ==========
 
