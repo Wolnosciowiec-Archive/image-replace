@@ -37,6 +37,13 @@ Example scenario:
  */
  ```
 
+Installation via bower
+======================
+
+```
+bower install wolnosciowiec-image-replace --save
+```
+
 Usage
 =====
 
