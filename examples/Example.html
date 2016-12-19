@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ImageReplace example</title>
+
+        <script type="text/javascript" src="../src/ImageReplace.js"></script>
+        <script>
+            var imgReplace = new WolnosciowiecImageReplace({
+                './not-working-example.jpg': './replacement.jpg'
+            });
+        </script>
+    </head>
+
+    <body style="background-color: black;">
+        <img
+            src="./example.jpg"
+            data-image-replace-id="./example.jpg"
+            onerror="imgReplace.handleImageLoadError(this);">
+
+        <img
+            src="./not-working-example.jpg"
+            data-image-replace-id="./not-working-example.jpg"
+            onerror="imgReplace.handleImageLoadError(this);">
+
+        <script>
+            // on document load send a report
+            document.addEventListener("DOMContentLoaded", function() {
+                window.setTimeout('imgReplace.sendErrorReport();', 1000);
+            });
+        </script>
+    </body>
+</html>
