@@ -33,7 +33,7 @@ Example scenario:
  *   License: LGPLv3
  *   Author: Wolnościowiec team
  *   
- *   @see https://github.com/Wolnosciowiec/web-proxy
+ *   @see https://github.com/Wolnosciowiec/image-replace
  */
  ```
 
