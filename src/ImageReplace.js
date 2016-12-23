@@ -57,6 +57,17 @@ function WolnosciowiecImageReplace (mapping, options) {
     this.swappedImages = [];
 
     /**
+     * Append mapping
+     *
+     * @param mapping
+     * @returns {WolnosciowiecImageReplace}
+     */
+    this.appendMapping = function (mapping) {
+        imgReplace.mapping = Object.assign(imgReplace.mapping, mapping);
+        return imgReplace;
+    };
+
+    /**
      * @param {object} element
      * @returns {boolean}
      */
