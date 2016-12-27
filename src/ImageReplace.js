@@ -24,6 +24,15 @@
  */
 function WolnosciowiecImageReplace (mapping, options) {
 
+    // be more bullet-proof
+    if (mapping === undefined) {
+        mapping = {};
+    }
+
+    if (options === undefined) {
+        mapping = {};
+    }
+
     /**
      * Mapping of real url to fallback url
      *
