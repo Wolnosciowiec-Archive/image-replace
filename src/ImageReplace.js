@@ -48,6 +48,7 @@ function WolnosciowiecImageReplace (mapping, options) {
     this.options = Object.assign({
         'successCallback': function (xhr) { console.info('successCallback', xhr); },
         'failureCallback': function (xhr) { console.warn('failureCallback', xhr); },
+        'replaceCallback': function (element, previousImage, replacementImage) { },
         'url': '/report/images/send',
         'method': 'POST'
     }, options);
@@ -93,6 +94,12 @@ function WolnosciowiecImageReplace (mapping, options) {
             if (imgReplace.swappedImages.indexOf(targetImage) > -1) {
                 console.warn('[WolnosciowiecImageReplace] Cannot swap image "' + element.src + '", the replacement is also not valid');
                 return false;
+            }
+
+            if (imgReplace.options.hasOwnProperty('replaceCallback')
+                && imgReplace.options.replaceCallback instanceof Function)
+            {
+                imgReplace.options.replaceCallback(element, element.src, targetImage);
             }
 
             console.log('[WolnosciowiecImageReplace] Swapped image from "' + element.src + '" to "' + targetImage + '"');
