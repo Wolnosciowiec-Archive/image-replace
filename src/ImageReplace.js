@@ -91,7 +91,8 @@ function WolnosciowiecImageReplace (mapping, options) {
         if (imgReplace.mapping.hasOwnProperty(element.dataset.imageReplaceId)) {
             var targetImage = imgReplace.mapping[element.dataset.imageReplaceId];
 
-            if (imgReplace.swappedImages.indexOf(targetImage) > -1) {
+            if (imgReplace.swappedImages.indexOf(targetImage) > -1
+                && element.src == targetImage) {
                 console.warn('[WolnosciowiecImageReplace] Cannot swap image "' + element.src + '", the replacement is also not valid');
                 return false;
             }
